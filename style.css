@@ -1,0 +1,182 @@
+:root {
+    --clr-red: hsl(10, 79%, 65%);
+    --clr-cyan: hsl(186, 34%, 60%);
+    --clr-darkbrown: hsl(25, 47%, 15%);
+    --clr-midbrown: hsl(28, 10%, 53%);
+    --clr-cream: hsl(27, 66%, 92%);
+    --clr-paleorange: hsl(33, 100%, 98%);
+}
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+body {
+    font-family: "DM Sans", sans-serif;
+    /* 4 7 */
+    font-size: 1.125rem;
+    background-color: var(--clr-cream);
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    padding: 1rem;
+}
+.flex {
+    display: flex;
+}
+.card-container {
+    max-width: 540px;
+    width: 100%;
+    margin-inline: auto;
+}
+.card {
+    border-radius: .7rem;
+    padding-inline: 1.15em;
+    padding-block: 1.4em;
+}
+/* header */
+.header-content-wrap {
+    justify-content: space-between;
+    color: var(--clr-paleorange);
+    background-color: var(--clr-red);
+    margin-bottom: 1rem;
+    align-items: center;
+}
+.balance-text {
+    font-size: 1rem;
+}
+.header-dollar {
+    font-size: 1.5rem;
+}
+.logo-wrap img {
+    width: 61px;
+}
+/* main */
+.main-content-wrap {
+    background-color: var(--clr-paleorange);
+    color: var(--clr-darkbrown);
+}
+.title {
+    font-size: 1.5rem;
+}
+/* chart part */
+.chart-wrap {
+    padding-top: 1.7rem;
+    text-align: center;
+    align-items: end;
+    margin-inline: auto;
+}
+.expense-box {
+    background-color: var(--clr-darkbrown);
+    padding: .2em;
+    padding-block: .8em;
+    color: var(--clr-paleorange);
+    font-size: .6rem;
+    margin-bottom: .9em;
+    border-radius: .2rem;
+    visibility: hidden;
+    transition: ease;
+}
+.bar-wrap {
+    width: 100%;
+    margin-inline: auto;
+}
+.bar {
+    background-color: var(--clr-red);
+    border-radius: .2rem;
+    max-width: 32px;
+    margin-inline: auto;
+    cursor: pointer;
+    transition: .3s ease;
+}
+.bar:hover, .bar:focus {
+    background-color:hsl(10, 100%, 76%);
+}
+.bar-1 {
+    height: 50px;
+}
+.bar-2 {
+    height: 99px;
+}
+.bar-3 {
+    height: 150px;
+    background-color: var(--clr-cyan);
+}
+.bar-3:hover, .bar-3:focus {
+    background-color: hsl(187, 49%, 80%);
+}
+.bar-4 {
+    height: 89px;
+}
+.bar-5 {
+    height: 67px;
+}
+.bar-6 {
+    height: 123px;
+}
+.bar-7 {
+    height: 73px;
+}
+.day {
+    font-size: .7rem;
+    color: hsl(37, 6%, 57%);
+    margin-top: .8rem;
+}
+hr {
+   border: 1px solid hsl(27, 47%, 93%);
+   margin-block: 2.1rem;
+}
+.bottom {
+    justify-content: space-between;
+    align-items: end;
+}
+.total-text {
+    color: hsl(37, 6%, 57%);
+    font-size: .95rem;
+}
+.bottom-dollar {
+    font-size: 1.95rem;
+}
+.percent-wrap {
+    text-align: right;
+}
+.percentage, .month {
+    font-size: 1rem;
+}
+.percentage {
+    font-weight: 700;
+}
+.month {
+    color: hsl(37, 6%, 57%);
+}
+@media (max-width: 330px) { 
+    .bar {
+        max-width: 27px;
+    }
+}
+@media (min-width: 500px) {
+    .card {
+        padding-inline: unset;
+        padding-block: unset;
+    }
+    .header-content-wrap {
+        padding: 2rem;
+    }
+    .main-content-wrap {
+        padding: 2rem;
+    }
+    .expense-box {
+        padding-block: .8em;
+        font-size: .9rem;
+    }
+    .bar {
+        max-width: 49px;
+    }
+}
